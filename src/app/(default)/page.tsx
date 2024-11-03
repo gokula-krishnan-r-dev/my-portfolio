@@ -8,7 +8,6 @@ import { useEffect, useState } from "react";
 import gsap from "gsap";
 import Skills from "@/components/shared/Landing/skills";
 import ProjectDesign from "@/components/shared/Landing/project-design";
-import Line from "@/components/shared/line";
 import LabelScroll from "@/components/animation/label-scroll";
 import ContactUs from "@/components/shared/Landing/contact-us";
 import Footer from "@/components/footer";
@@ -18,7 +17,6 @@ const AboutUs = dynamic(() => import("@/components/shared/Landing/about-us"));
 const Experience = dynamic(
   () => import("@/components/shared/Landing/experience")
 );
-
 const ProjectWorks = dynamic(
   () => import("@/components/shared/Landing/work-project")
 );
@@ -55,7 +53,7 @@ export default function Home() {
         <Hero />
         <AboutUs />
         <LabelScroll
-          text="👋 WELCOME TO MY DIGITAL PLAYGROUND / PAULVL / 💻 FULL STACK DEVELOPER / DESIGNER & CODER 🚀"
+          text="👋 WELCOME TO MY DIGITAL PLAYGROUND / GOKULA / 💻 FULL STACK DEVELOPER / DESIGNER & CODER 🚀"
           containerClassName="!bg-white text-black"
           className=" !bg-white text-black"
         />

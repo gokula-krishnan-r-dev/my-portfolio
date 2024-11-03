@@ -5,47 +5,64 @@ import BlurryCursor from "@/components/animation/curser";
 import HeaderTitle from "../heading-title";
 import LabelScroll from "@/components/animation/label-scroll";
 import { useCurser } from "@/components/provider/curserProvider";
+import Link from "next/link";
 
 const experienceData = [
   {
     id: 1,
-    title: "Senior Frontend Developer",
-    company: "TenTwenty Digital Agency",
-    dateRange: "January 2022 - September 2023",
-    location: "Remote",
-    projectLink: "https://tentwenty.com/projects",
+    title: "Full stack Developer",
+    company: "TubePro.co",
+    dateRange: "Nov 2023 - May 2024",
+    location: "Tamil Nadu, India",
+    projectLink: "https://tubepro.co",
   },
   {
     id: 2,
-    title: "Frontend Developer",
-    company: "Innovative Solutions",
-    dateRange: "March 2020 - December 2021",
-    location: "Remote",
+    title: "Jr.Full Stack Developer",
+    company: "trulio.co",
+    dateRange: "Nov 2023 - May 2024",
+    location: "Tamil Nadu, India",
     projectLink: "https://innovativesolutions.com/projects",
   },
   {
     id: 3,
-    title: "Junior Frontend Developer",
-    company: "Creative Tech Hub",
-    dateRange: "January 2018 - February 2020",
-    location: "New York, NY",
-    projectLink: "https://creativetechhub.com/projects",
+    title: "Full Stack employee",
+    company: "Accomodation Hub",
+    dateRange: "Nov 2023 - May 2024",
+    location: "Tamil Nadu, India",
+    projectLink: "https://booking-fgtd.vercel.app/",
   },
   {
     id: 4,
-    title: "Intern",
-    company: "Web Wizards",
-    dateRange: "June 2017 - December 2017",
-    location: "San Francisco, CA",
-    projectLink: "https://webwizards.com/projects",
+    title: "Full Stack Engineer",
+    company: "zynoflix Inc",
+    dateRange: "Feb 2023 - May 2024",
+    location: "Tamil Nadu, India",
+    projectLink: "https://zynoflix.com",
   },
   {
     id: 5,
-    title: "Freelance Web Developer",
-    company: "Self-employed",
-    dateRange: "January 2016 - May 2017",
-    location: "Various",
-    projectLink: "https://yourportfolio.com",
+    title: "Full Stack Developer(React JS)",
+    company: "Magicvisor.com",
+    dateRange: "Jan 2022 - Dec 2023",
+    location: "USA(remote)",
+    projectLink: "https://magicvisor.com",
+  },
+  {
+    id: 5,
+    title: "Full Stack Developer",
+    company: "SPACENOS.com",
+    dateRange: "Jun 2023 - Jul 2023",
+    location: "USA(remote)",
+    projectLink: "https://spacenos.com/",
+  },
+  {
+    id: 6,
+    title: "Full Stack Developer",
+    company: "copyleads",
+    dateRange: "Feb 2023 - Jun 2023",
+    location: "USA(remote)",
+    projectLink: "https://copyleads.com/",
   },
 ];
 
@@ -115,7 +132,7 @@ const Experience = () => {
       <div className="flex items-center gap-12 justify-between py-12">
         <StatCard
           label="Years Experience in Full Stack development"
-          number={5}
+          number={3}
         />
         <p className="!max-w-xl w-auto">
           I have worked on a variety of projects over the years. Here are some
@@ -128,7 +145,9 @@ const Experience = () => {
         />
       </div>
       {experienceData.map((job) => (
-        <div
+        <Link
+          target="_blank"
+          href={job.projectLink}
           ref={addToRefs}
           key={job.id}
           className="flex py-6 justify-between w-full items-center"
@@ -138,7 +157,7 @@ const Experience = () => {
             onMouseEnter={() => setIsActive(true)}
           >
             <h1
-              className="text-6xl font-semibold text-white cursor-pointer"
+              className="text-5xl font-semibold text-white cursor-pointer"
               onMouseEnter={onEnter}
               onMouseLeave={onLeave}
             >
@@ -151,7 +170,7 @@ const Experience = () => {
             <h6>{job.dateRange}</h6>
             <p>{job.location}</p>
           </div>
-        </div>
+        </Link>
       ))}
     </section>
   );
